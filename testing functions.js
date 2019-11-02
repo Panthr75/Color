@@ -3,7 +3,7 @@
  * @param {String} string the color string containing hex values
  * @param {Number} [a=1] Alpha (Optional). Defaults to 1. 
  */
-function fromString(string, a=1) {
+function fromString(devTools, string, a=1) {
     var startTime = performance.now();
     // ### Tools
     let hexValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
@@ -55,7 +55,12 @@ function fromString(string, a=1) {
     b = converter(b);
 
     var endTime = performance.now();
-    console.log(`SMALL ARRAY: ${(endTime - startTime)}ms`);
+    var message = `SMALL ARRAY: ${(endTime - startTime)}ms`;
+    if (devTools)
+        console.log(message);
+    else
+        document.getElementById("output").value += message + "\n";
+    
     return {
         r: r,
         g: g,
@@ -118,7 +123,12 @@ function fromString2(string, a=1) {
 
     
     var endTime = performance.now();
-    console.log(`BIG ARRAY: ${(endTime - startTime)}ms`);
+    var message = `BIG ARRAY: ${(endTime - startTime)}ms`;
+    if (devTools)
+        console.log(message);
+    else
+        document.getElementById("output").value += message + "\n";
+    
     return {
         r: r,
         g: g,
