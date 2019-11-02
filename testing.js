@@ -6,5 +6,5 @@ function TestValue(hex, devTools) {
 
 
 document.getElementById("testButton").addEventListener("click", function() {
-    TestValue(prompt("Enter hex value to test", "#111111"), document.getElementById("canDevTools").checked);
+    TestValue(prompt("Enter hex value to test", "#111111"), !document.getElementById("canDevTools").checked);
 });
