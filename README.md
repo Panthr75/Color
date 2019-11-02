@@ -10,3 +10,6 @@ If you can open up DevTools (`CTRL` + `SHIFT` + `I`), do that, and click on the 
   
   
 If you cannot open DevTools due to restrictions, check the box that is labeled `No DevTools`, then click on the button labeled test.
+
+# More  
+If you want to look at the the Main Source Code (The class that I made that I stripped these functions from), they are available in the ColorsClass.js file.
