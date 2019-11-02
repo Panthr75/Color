@@ -136,10 +136,3 @@ class InvalidArgumentError extends Error {
         super(message);
     }
 }
-
-
-// TEST the functions with this function
-function TestValue(hex) {
-    fromString(hex);
-    fromString2(hex);
-}
