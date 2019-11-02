@@ -51,9 +51,6 @@ class Color {
         // Credit: https://stackoverflow.com/a/17243070/9588181
         // Convert HSV to RGB so it can be used easily by programs and the GameEngine
         var r, g, b, i, f, p, q, t;
-        if (arguments.length === 1) {
-            s = h.s, v = h.v, h = h.h;
-        }
         i = Math.floor(h * 6);
         f = h * 6 - i;
         p = v * (1 - s);
